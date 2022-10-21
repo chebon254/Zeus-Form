@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/icons/Group35.png" type="image/x-icon">
+
+
+    <title>Zeus Capital - Wealth Creation for Everyone.</title>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js">
+    </script>
+</head>
+
+<body class="container">
+    <div class="social__media">
+        <a target="_blank" href="https://www.instagram.com/zeus_capital_life/"><i class="fa fa-instagram"></i></a>
+        <a target="_blank" href="https://twitter.com/ZeusCapitalLife"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://www.facebook.com/ZeusCapitalLife/"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/zeus-capital-investments/"> <i class="fa fa-linkedin"></i></a>
+    </div>
+    <div class="app__content">
+        <img src="./assets/img/Screenshot_2022-07-23_at_11.34 1.png">
+        <h5>The 3.0 Wealth Creation <br>Flex For Everyone.</h5>
+        <span>Get More from your money</span>
+    </div>
+    <div class="app__bottom">
+        <div class="app__animation">
+            <div class="lottie" id="lottie"></div>
+            <!--<img class="app__animation_img" src="./assets/img/cloud bluepng 1.png">-->
+        </div>
+        <div class="app__form">
+            <div class="wrap" ng-controller="MainCtrl">
+
+                <form name="formRegister" class="form--register" onsubmit="validateInput();return false" ng-submit="formRegister.$valid && !registerFormSubmitted && submitRegisterForm(user)" novalidate>
+                    <fieldset>
+                        <legend class="serif get_early">Get Early Access!</legend>
+
+                        <div class="input-group" ng-class="{'input--filled' : user.name}">
+                            <input class="input__field" id="formRegisterName" type="text" onkeyup="checkform()" required>
+                            <label class="input__label" for="formRegisterName">
+                  <svg class="graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                    <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                  </svg>
+                  <span class="input__label-content" id="firstNameSpan">First Name *</span>
+                </label>
+                        </div>
+
+                        <div class="input-group" ng-class="{'input--filled' : user.email}">
+                            <input class="input__field" id="formRegisterEmail" type="email" onkeyup="checkform()" required>
+                            <label class="input__label" for="formRegisterEmail">
+                  <svg class="graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                    <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                  </svg>
+                  <span class="input__label-content" id="emailSpan">E-mail address *</span>
+                </label>
+                        </div>
+                    </fieldset>
+                    <p style="margin:  0;" class="form__instructions">Fields with * are required.</p>
+
+                    <button onClick="submitForm(); return false" class="button--submit" type="submit" id="button__submit">
+                    <span class="button--submit__label button--submit__default" id="add_success">
+                    Join
+                    </span>
+                    <span class="button--submit__label button--submit__success">
+                      <i class="fa fa-check"></i> Yay, success!
+                    </span>
+            </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="app__bottom__bottom">
+        <div class="anim__background" id="anim__background" style="width: 100%;"></div>
+    </div>
+    <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('lottie'),
+            path: './assets/rocket.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            name: "Lottie Animation",
+        });
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim__background'),
+            path: './assets/skyline01.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            name: "Lottie Animation",
+        });
+    </script>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
