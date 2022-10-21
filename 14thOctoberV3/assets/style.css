@@ -1,823 +1,766 @@
-                @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
-                .container {
-                    background-color: #4682F1;
-                    margin: 0;
-                }
-                
-                .social__media,
-                .app__content {
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    /*gap: 2rem;
-    margin-top: 2rem;*/
-                }
-                
-                .social__media {
-                    gap: 1.5rem !important;
-                    margin-top: 0.51rem;
-                }
-                
-                .social__media i {
-                    font-size: 23px;
-                    color: #fff;
-                }
-                
-                .app__content {
-                    flex-direction: column;
-                    gap: 0.61rem;
-                    color: #fff;
-                }
-                
-                .app__content img {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 20%;
-                    margin-bottom: -1.5%;
-                }
-                
-                .lottie {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 94%;
-                }
-                
-                .anim__background {
-                    width: 100%;
-                    position: absolute;
-                    bottom: 0;
-                }
-                /**/
-                /**/
-                /**/
-                /**/
-                
-                .form--register {
-                    width: 100%;
-                    max-width: 96%;
-                    margin: auto;
-                    padding: 0px 2px;
-                }
-                
-                .form__instructions {
-                    color: white;
-                    text-align: right;
-                    font-size: 12px;
-                }
-                
-                fieldset {
-                    margin: 0;
-                    padding: 0;
-                    border: none !important;
-                    font-size: 17px;
-                }
-                
-                legend {
-                    margin-bottom: 0px;
-                    font-size: 1.2em;
-                }
-                
-                .get_early {
-                    text-align: center;
-                    width: 100%;
-                    font-family: 'Raleway', sans-serif;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 20px;
-                    /*line-height: 40px;*/
-                    color: #fff;
-                }
-                
-                @media (min-width: 640px) {
-                    legend {
-                        font-size: 1.7em;
-                    }
-                }
-                
-                .input-group {
-                    display: inline-block;
-                    width: 100%;
-                    margin: 0.7em 0;
-                    position: relative;
-                    z-index: 1;
-                    text-transform: uppercase;
-                    vertical-align: top;
-                }
-                
-                .input__field {
-                    display: block;
-                    width: 84.5%;
-                    padding: 0.8em;
-                    position: relative;
-                    float: right;
-                    background: transparent;
-                    border: 2px solid transparent;
-                    border-radius: 0;
-                    font-weight: bold;
-                    color: white;
-                    -webkit-appearance: none;
-                    /* for box shadows to show on iOS */
-                }
-                
-                .input__field.ng-dirty.ng-invalid {
-                    box-shadow: 0 0 3px rgba(167, 48, 48, 0.5);
-                    border: 2px solid rgba(167, 48, 48, 0.5);
-                }
-                
-                .input__field.ng-dirty.ng-valid:not(.ng-empty) {
-                    box-shadow: 0 0 3px rgba(73, 160, 157, 0.5);
-                    border: 2px solid rgba(73, 160, 157, 0.5);
-                }
-                
-                .input__field:focus {
-                    outline: none;
-                }
-                
-                .input__label {
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    padding: 0;
-                    position: absolute;
-                    float: right;
-                    font-size: 70.25%;
-                    font-weight: bold;
-                    text-align: left;
-                    color: white;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    -webkit-touch-callout: none;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                    cursor: text;
-                }
-                
-                .input__label-content {
-                    position: relative;
-                    display: block;
-                    padding: 1.6em 0;
-                    width: 100%;
-                    transform-origin: 0% 50%;
-                    transition: transform 0.3s;
-                }
-                
-                .graphic {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    fill: none;
-                    stroke: white;
-                    stroke-width: 4px;
-                    stroke-dasharray: 962;
-                    stroke-dashoffset: 558;
-                    transform: scale3d(1, -1, 1);
-                    transition: stroke-dashoffset 0.3s;
-                    pointer-events: none;
-                }
-                
-                .input__field:focus+.input__label,
-                .ng-dirty+.input__label {
-                    cursor: default;
-                    pointer-events: none;
-                }
-                
-                .input__field:focus+.input__label .graphic,
-                .ng-dirty+.input__label .graphic {
-                    stroke-dashoffset: 0;
-                }
-                
-                .input__field:focus+.input__label .input__label-content,
-                .ng-dirty+.input__label .input__label-content {
-                    transform: scale3d(0.81, 0.81, 1) translate3d(0, -4em, 0);
-                }
-                
-                .button--submit {
-                    height: 45px;
-                    margin-top: 20px;
-                    padding: 8px 30px;
-                    position: relative;
-                    background: transparent;
-                    border: 1px solid white;
-                    color: white;
-                    text-transform: uppercase;
-                    overflow: hidden;
-                    transition: 300ms ease all;
-                    transition: box-shadow 300ms ease-in-out, color 300ms 0 ease-in-out, opacity 300ms ease-in-out;
-                }
-                
-                .input__field_input__label-content {
-                    transform: scale3d(0.81, 0.81, 1) translate3d(0, -4em, 0);
-                }
-                
-                .input__field-valid {
-                    box-shadow: 0 0 3px rgba(73, 160, 157, 0.5);
-                    border: 2px solid #fff;
-                }
-                /* .button--submit:not(.disabled):not(.success):hover {
-    box-shadow: 0 0 40px 40px white inset;
-    color: #49a09d;
-} */
-                
-                .button--submit:focus {
-                    outline: 1px solid rgba(255, 255, 255, 0.5);
-                }
-                
-                .button--submit.disabled {
-                    opacity: 0.7;
-                    cursor: not-allowed;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                    border: 1px dashed white;
-                }
-                
-                .button--submit.success {
-                    cursor: not-allowed;
-                    background: #49a09d;
-                }
-                
-                .button--submit__label {
-                    display: block;
-                    transition: transform 300ms ease-out, opacity 300ms ease-out;
-                }
-                
-                .button--submit__default {
-                    position: relative;
-                    cursor: pointer;
-                }
-                
-                .success .button--submit__default {
-                    transform: translate3d(0, -100%, 0);
-                    opacity: 0;
-                    visibility: hidden;
-                }
-                
-                .button--submit__success {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    right: 0;
-                    opacity: 0;
-                    visibility: hidden;
-                    transform: translate3d(0, 100%, 0);
-                    font-size: 13px;
-                }
-                
-                .success .button--submit__success {
-                    opacity: 1;
-                    visibility: visible;
-                    transform: translate3d(0, -50%, 0);
-                }
-                /**/
-                /**/
-                /**/
-                /**/
-                /**/
-                /**/
-                
-                .app__content h5 {
-                    margin-bottom: 0;
-                    margin-top: 0rem;
-                    font-family: 'Raleway', sans-serif;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 30px;
-                    /* line-height: 77px;*/
-                    text-align: center;
-                }
-                
-                .app__content span {
-                    font-size: 1.8rem;
-                    border-top: 0.51px solid #E7EEFC;
-                    border-top-width: medium;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    border-bottom: 0.51px solid #ffffff;
-                    /* padding-top: 1rem;
-        padding-bottom: 1rem;*/
-                    padding: 0.41rem 0.1rem;
-                    border-bottom-width: medium;
-                    font-family: 'Raleway', sans-serif;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 11px;
-                    /* line-height: 38px;
-        */
-                }
-                
-                .top__underline {
-                    background: #E7EEFC;
-                    width: 24%;
-                    height: 0.31rem;
-                    margin-top: 1.6rem;
-                }
-                
-                .bottom__underline {
-                    background: #ffffff;
-                    width: 24%;
-                    height: 0.1rem;
-                }
-                
-                .app__bottom {
-                    display: flex;
-                    z-index: 9;
-                    left: 8%;
-                    position: absolute;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 11rem;
-                    flex-direction: row-reverse;
-                }
-                
-                .app__form {
-                    background-color: #0148D4;
-                    border-radius: 12px;
-                    padding: 1rem;
-                    width: 18%;
-                }
-                
-                .style__form {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: baseline;
-                    color: #fff;
-                    gap: 3rem;
-                }
-                
-                .style__form h2 {
-                    text-align: center;
-                    width: 100%;
-                    font-family: 'Raleway', sans-serif;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 34px;
-                    line-height: 40px;
-                }
-                /*.form__group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+} 
+body{
+    height: 100% !important;
+    width: 100% !important;
+}
+.container {
+     background-color: #4682F1;
+     margin: 0;
+     padding: 40px 0px 0px;
+}
+ .social__media, .app__content {
+    max-width: 1200px;
+    margin: auto !important;
+    width: 100% ;
+     display: flex;
+     text-align: center;
+     justify-content: center;
+    /*gap: 2rem;
+     margin-top: 2rem;
+    */
+}
+ .social__media {
+     gap: 1.5rem !important;
+     margin-top: 0.51rem;
+}
+ .social__media a {
+    margin: 0px 14px 0px;
+}
+ .app__content {
+     flex-direction: column;
+     gap: 0.61rem;
+     color: #fff;
+}
+ .app__content h1 {
+    margin: 20px auto;
+    font-size: 60px;
+    font-weight: 800 !important;
+    font-family: 'Poppins', sans-serif !important;
+    color: #ffffff;
+    letter-spacing: 0.8px;
+}
+ .lottie {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 94%;
+}
+ .anim__background {
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+}
+/**/
+/**/
+/**/
+/**/
+ .form--register {
+     width: 100%;
+     max-width: 96%;
+     margin: auto;
+     padding: 0px 2px;
+}
+ .form__instructions {
+     color: white;
+     text-align: right;
+     font-size: 12px;
+}
+ fieldset {
+     margin: 0;
+     padding: 0;
+     border: none !important;
+     font-size: 17px;
+}
+ legend {
+     margin-bottom: 0px;
+     font-size: 1.2em;
+}
+ .get_early {
+     text-align: center;
+     width: 100%;
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+    /*line-height: 40px;
+    */
+     color: #fff;
+}
+ @media (min-width: 640px) {
+     legend {
+         font-size: 1.7em;
+    }
+}
+ .input-group {
+     display: inline-block;
+     width: 100%;
+     margin: 0.7em 0;
+     position: relative;
+     z-index: 1;
+     text-transform: uppercase;
+     vertical-align: top;
+}
+ .input__field {
+     display: block;
+     width: 84.5%;
+     padding: 0.8em;
+     position: relative;
+     float: right;
+     background: transparent;
+     border: 2px solid transparent;
+     border-radius: 0;
+     font-weight: bold;
+     color: white;
+     -webkit-appearance: none;
+    /* for box shadows to show on iOS */
+}
+ .input__field.ng-dirty.ng-invalid {
+     box-shadow: 0 0 3px rgba(167, 48, 48, 0.5);
+     border: 2px solid rgba(167, 48, 48, 0.5);
+}
+ .input__field.ng-dirty.ng-valid:not(.ng-empty) {
+     box-shadow: 0 0 3px rgba(73, 160, 157, 0.5);
+     border: 2px solid rgba(73, 160, 157, 0.5);
+}
+ .input__field:focus {
+     outline: none;
+}
+ .input__label {
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+     padding: 0;
+     position: absolute;
+     float: right;
+     font-size: 70.25%;
+     font-weight: bold;
+     text-align: left;
+     color: white;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     cursor: text;
+}
+ .input__label-content {
+     position: relative;
+     display: block;
+     padding: 1.6em 0;
+     width: 100%;
+     transform-origin: 0% 50%;
+     transition: transform 0.3s;
+}
+ .graphic {
+     position: absolute;
+     top: 0;
+     left: 0;
+     fill: none;
+     stroke: white;
+     stroke-width: 4px;
+     stroke-dasharray: 962;
+     stroke-dashoffset: 558;
+     transform: scale3d(1, -1, 1);
+     transition: stroke-dashoffset 0.3s;
+     pointer-events: none;
+}
+ .input__field:focus+.input__label, .ng-dirty+.input__label {
+     cursor: default;
+     pointer-events: none;
+}
+ .input__field:focus+.input__label .graphic, .ng-dirty+.input__label .graphic {
+     stroke-dashoffset: 0;
+}
+ .input__field:focus+.input__label .input__label-content, .ng-dirty+.input__label .input__label-content {
+     transform: scale3d(0.81, 0.81, 1) translate3d(0, -4em, 0);
+}
+ .button--submit {
+     height: 45px;
+     margin-top: 20px;
+     padding: 8px 30px;
+     position: relative;
+     background: transparent;
+     border: 1px solid white;
+     color: white;
+     text-transform: uppercase;
+     overflow: hidden;
+     transition: 300ms ease all;
+     transition: box-shadow 300ms ease-in-out, color 300ms 0 ease-in-out, opacity 300ms ease-in-out;
+}
+ .input__field_input__label-content {
+     transform: scale3d(0.81, 0.81, 1) translate3d(0, -4em, 0);
+}
+ .input__field-valid {
+     box-shadow: 0 0 3px rgba(73, 160, 157, 0.5);
+     border: 2px solid #fff;
+}
+/* .button--submit:not(.disabled):not(.success):hover {
+     box-shadow: 0 0 40px 40px white inset;
+     color: #49a09d;
+}
+ */
+ .button--submit:focus {
+     outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+ .button--submit.disabled {
+     opacity: 0.7;
+     cursor: not-allowed;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     border: 1px dashed white;
+}
+ .button--submit.success {
+     cursor: not-allowed;
+     background: #49a09d;
+}
+ .button--submit__label {
+     display: block;
+     transition: transform 300ms ease-out, opacity 300ms ease-out;
+}
+ .button--submit__default {
+     position: relative;
+     cursor: pointer;
+}
+ .success .button--submit__default {
+     transform: translate3d(0, -100%, 0);
+     opacity: 0;
+     visibility: hidden;
+}
+ .button--submit__success {
+     position: absolute;
+     top: 50%;
+     left: 0;
+     right: 0;
+     opacity: 0;
+     visibility: hidden;
+     transform: translate3d(0, 100%, 0);
+     font-size: 13px;
+}
+ .success .button--submit__success {
+     opacity: 1;
+     visibility: visible;
+     transform: translate3d(0, -50%, 0);
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+ .app__content h5 {
     width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto !important;
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 40px;
+     text-align: center;
 }
-
-.form__group label {
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
+.app__content .blocked{
+    margin: auto;
+    width: fit-content;
+    padding: 6px 20px;
+    border-top: 0.51px solid #E7EEFC;
+    border-bottom: 0.51px solid #ffffff;
 }
-
-input[type="text" i],
-input[type="email" i] {
-    height: 40px;
-    border-radius: 12px;
-    color: #fff;
-    padding-left: 0.51rem;
-    background: #0148D4;
-    border: 0.51px solid #80A3E9;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 27px;
-    line-height: 32px;
+ .app__content span {
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 20px;
 }
-
-*/
-                
-                .pyramidIcon {
-                    padding-left: 25px !important;
-                    background: url("icons/alert.png") no-repeat left !important;
-                    background-size: 20px !important;
-                }
-                
-                .doneIcon {
-                    padding-left: 25px !important;
-                    background-image: url(icons/done.png) !important;
-                    background-size: 20px !important;
-                    background-repeat: no-repeat !important;
-                    background-position: left!important;
-                }
-                
-                .app__animation {
-                    width: 19%;
-                }
-                
-                .app__animation_img {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                
-                .inner__left,
-                .inner__right {
-                    display: flex;
-                    justify-content: space-between;
-                }
-                
-                .inner__img {
-                    background-image: url(img/cloud\ bluepng\ 1.png) !important;
-                    background-repeat: no-repeat !important;
-                    background-position: center!important;
-                    padding-top: 3rem;
-                    display: grid;
-                    gap: 5rem;
-                }
-                /*input[type="submit" i] {
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
-    border-radius: 12px;
-    background: transparent;
-    border: 0.51px solid #80A3E9;
-    color: #fff;
-    padding: 0.51rem 2.5rem;
-    cursor: pointer;
-    margin-top: 3rem;
+ .top__underline {
+     background: #E7EEFC;
+     width: 24%;
+     height: 0.31rem;
+     margin-top: 1.6rem;
 }
-
-.success_button {
-    font-size: 17px !important;
-    padding-left: 2rem!important;
-  
-  line-height: 20px !important;
-    border: transparent !important;
+ .bottom__underline {
+     background: #ffffff;
+     width: 24%;
+     height: 0.1rem;
 }
-*/
-                
-                .brief__required {
-                    color: #fff;
-                    margin-top: 0;
-                    text-align: end;
-                    font-family: 'Raleway', sans-serif;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 15px;
-                    line-height: 18px;
-                }
-                
-                .form_error {
-                    color: #FF6F6F;
-                    font-family: 'Raleway', sans-serif;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 15px;
-                    line-height: 18px;
-                }
-                
-                .app__bottom__bottom {
-                    width: 100%;
-                    display: flex;
-                    align-items: baseline;
-                }
-                
-                .app__bottom__bottom img:nth-child(1) {
-                    width: 43%;
-                }
-                
-                .app__bottom__bottom img:nth-child(3) {
-                    width: 35%;
-                }
-                
-                @media only screen and (min-device-width: 220px) and (max-device-width: 319px) {
-                    .app__content img {
-                        width: 50%;
-                    }
-                    .app__bottom__bottom img:nth-child(3) {
-                        width: 25%;
-                    }
-                    .app__bottom {
-                        position: relative;
-                        left: 0;
-                    }
-                    .social__media {
-                        margin-top: 2rem;
-                    }
-                    .social__media i {
-                        font-size: 28px;
-                    }
-                    .app__animation {
-                        width: 36%;
-                    }
-                    fieldset {
-                        font-size: 20px;
-                    }
-                    .get_early {
-                        font-size: 34px;
-                        line-height: 40px;
-                    }
-                    .input-group {
-                        width: 100%;
-                        margin: 1.1em 0;
-                        position: relative;
-                        z-index: 1;
-                    }
-                    .input__field {
-                        width: 89.5%;
-                        padding: 0.8em;
-                        border: 2px solid transparent;
-                    }
-                    .app__content h5 {
-                        font-weight: 500;
-                        font-size: 66px;
-                        line-height: 77px;
-                    }
-                    .app__content span {
-                        border-top: 1px solid #E7EEFC;
-                        padding-top: 1rem;
-                        border-bottom: 1px solid #ffffff;
-                        padding-bottom: 1rem;
-                        font-size: 32px;
-                        line-height: 38px;
-                    }
-                }
-                
-                @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-                    .app__bottom {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 2rem;
-                        margin-top: 2rem;
-                    }
-                    .app__content img {
-                        width: 50%;
-                    }
-                    .social__media {
-                        margin-top: 2rem;
-                    }
-                    .social__media i {
-                        font-size: 28px;
-                    }
-                    fieldset {
-                        font-size: 20px;
-                    }
-                    .app__animation {
-                        width: 36%;
-                    }
-                    .input-group {
-                        width: 100%;
-                        margin: 1.1em 0;
-                        position: relative;
-                        z-index: 1;
-                    }
-                    .form--register {
-                        padding: 40px 20px;
-                    }
-                    .input__field {
-                        width: 89.5%;
-                        padding: 0.8em;
-                        border: 2px solid transparent;
-                    }
-                    .get_early {
-                        font-size: 34px;
-                        line-height: 40px;
-                    }
-                    .app__bottom {
-                        position: relative;
-                        left: 0;
-                    }
-                    .lottie {
-                        width: 110%;
-                    }
-                    .app__form {
-                        width: 36%;
-                        padding: 2rem;
-                    }
-                    .app__bottom__bottom img:nth-child(3) {
-                        width: 25%;
-                    }
-                    .app__content h5 {
-                        font-weight: 500;
-                        font-size: 66px;
-                        line-height: 77px;
-                    }
-                    .app__content span {
-                        border-top: 1px solid #E7EEFC;
-                        padding-top: 1rem;
-                        border-bottom: 1px solid #ffffff;
-                        padding-bottom: 1rem;
-                        font-size: 32px;
-                        line-height: 38px;
-                    }
-                }
-                
-                @media only screen and (min-device-width: 481px) and (max-device-width: 600px) {
-                    /* smartphones, Android phones, landscape iPhone */
-                    .app__bottom {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 2rem;
-                        margin-top: 2rem;
-                    }
-                    .app__content img {
-                        width: 50%;
-                    }
-                    .social__media {
-                        margin-top: 2rem;
-                    }
-                    .social__media i {
-                        font-size: 28px;
-                    }
-                    fieldset {
-                        font-size: 20px;
-                    }
-                    .get_early {
-                        font-size: 34px;
-                        line-height: 40px;
-                    }
-                    .app__animation {
-                        width: 36%;
-                    }
-                    .form--register {
-                        padding: 40px 20px;
-                    }
-                    .input-group {
-                        width: 100%;
-                        margin: 1.1em 0;
-                        position: relative;
-                        z-index: 1;
-                    }
-                    .input__field {
-                        width: 89.5%;
-                        padding: 0.8em;
-                        border: 2px solid transparent;
-                    }
-                    .app__form {
-                        width: 36%;
-                        padding: 2rem;
-                    }
-                    .app__bottom {
-                        position: relative;
-                        left: 0;
-                    }
-                    .app__bottom__bottom img:nth-child(3) {
-                        width: 25%;
-                    }
-                    .app__content h5 {
-                        font-weight: 500;
-                        font-size: 66px;
-                        line-height: 77px;
-                    }
-                    .app__content span {
-                        border-top: 1px solid #E7EEFC;
-                        padding-top: 1rem;
-                        border-bottom: 1px solid #ffffff;
-                        padding-bottom: 1rem;
-                        font-size: 32px;
-                        line-height: 38px;
-                    }
-                }
-                
-                @media only screen and (min-device-width: 601px) and (max-device-width: 800px) {
-                    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-                    .app__bottom {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 2rem;
-                        margin-top: 2rem;
-                    }
-                    .social__media {
-                        margin-top: 2rem;
-                    }
-                    .social__media i {
-                        font-size: 28px;
-                    }
-                    .app__form {
-                        width: 36%;
-                        padding: 2rem;
-                    }
-                    .app__animation {
-                        width: 36%;
-                    }
-                    .get_early {
-                        font-size: 34px;
-                        line-height: 40px;
-                    }
-                    .input-group {
-                        width: 100%;
-                        margin: 1.1em 0;
-                        position: relative;
-                        z-index: 1;
-                    }
-                    fieldset {
-                        font-size: 20px;
-                    }
-                    .form--register {
-                        padding: 40px 20px;
-                    }
-                    .input__field {
-                        width: 89.5%;
-                        padding: 0.8em;
-                        border: 2px solid transparent;
-                    }
-                    .app__content img {
-                        width: 50%;
-                    }
-                    .app__bottom {
-                        position: relative;
-                        left: 0;
-                    }
-                    .app__bottom__bottom img:nth-child(3) {
-                        width: 25%;
-                    }
-                    .app__content h5 {
-                        font-weight: 500;
-                        font-size: 66px;
-                        line-height: 77px;
-                    }
-                    .app__content span {
-                        border-top: 1px solid #E7EEFC;
-                        padding-top: 1rem;
-                        border-bottom: 1px solid #ffffff;
-                        padding-bottom: 1rem;
-                        font-size: 32px;
-                        line-height: 38px;
-                    }
-                }
-                
-                @media only screen and (min-device-width: 801px) and (max-device-width: 1025px) {
-                    /* tablet, landscape iPad, lo-res laptops ands desktops */
-                    .app__bottom {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        flex-direction: row-reverse;
-                        margin-top: 2rem;
-                    }
-                    .app__form {
-                        width: 26%;
-                        padding: 2rem;
-                    }
-                    .social__media {
-                        margin-top: 2rem;
-                    }
-                    .social__media i {
-                        font-size: 28px;
-                    }
-                    .app__form {
-                        width: 36%;
-                        padding: 2rem;
-                    }
-                    .app__animation {
-                        width: 36%;
-                    }
-                    .get_early {
-                        font-size: 34px;
-                        line-height: 40px;
-                    }
-                    .input-group {
-                        width: 100%;
-                        margin: 1.1em 0;
-                        position: relative;
-                        z-index: 1;
-                    }
-                    fieldset {
-                        font-size: 20px;
-                    }
-                    .form--register {
-                        padding: 40px 20px;
-                    }
-                    .input__field {
-                        width: 89.5%;
-                        padding: 0.8em;
-                        border: 2px solid transparent;
-                    }
-                    .app__content img {
-                        width: 50%;
-                    }
-                    .app__bottom {
-                        position: relative;
-                        left: 0;
-                    }
-                    .app__content img {
-                        width: 50%;
-                    }
-                    .app__bottom__bottom img:nth-child(3) {
-                        width: 25%;
-                    }
-                }
-                
-                @media only screen and (min-device-width: 1026px) and (max-device-width: 1281px) {
-                    /* big landscape tablets, laptops, and desktops */
-                    .app__bottom {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        flex-direction: row-reverse;
-                        margin-top: 2rem;
-                    }
-                    .app__form {
-                        width: 26%;
-                    }
-                }
+ .app__bottom {
+     display: flex;
+     z-index: 9;
+     left: 8%;
+     position: absolute;
+     align-items: center;
+     justify-content: center;
+     gap: 11rem;
+     flex-direction: row-reverse;
+}
+ .app__form {
+     background-color: #0148D4;
+     border-radius: 12px;
+     padding: 1rem;
+     width: 18%;
+}
+ .style__form {
+     display: flex;
+     flex-direction: column;
+     align-items: baseline;
+     color: #fff;
+     gap: 3rem;
+}
+ .style__form h2 {
+     text-align: center;
+     width: 100%;
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 34px;
+     line-height: 40px;
+}
+/*.form__group {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 1rem;
+     width: 100%;
+}
+ .form__group label {
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 18px;
+}
+ input[type="text" i], input[type="email" i] {
+     height: 40px;
+     border-radius: 12px;
+     color: #fff;
+     padding-left: 0.51rem;
+     background: #0148D4;
+     border: 0.51px solid #80A3E9;
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 27px;
+     line-height: 32px;
+}
+ */
+ .pyramidIcon {
+     padding-left: 25px !important;
+     background: url("icons/alert.png") no-repeat left !important;
+     background-size: 20px !important;
+}
+ .doneIcon {
+     padding-left: 25px !important;
+     background-image: url(icons/done.png) !important;
+     background-size: 20px !important;
+     background-repeat: no-repeat !important;
+     background-position: left!important;
+}
+ .app__animation {
+     width: 19%;
+}
+ .app__animation_img {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+}
+ .inner__left, .inner__right {
+     display: flex;
+     justify-content: space-between;
+}
+ .inner__img {
+     background-image: url(img/cloud\ bluepng\ 1.png) !important;
+     background-repeat: no-repeat !important;
+     background-position: center!important;
+     padding-top: 3rem;
+     display: grid;
+     gap: 5rem;
+}
+/*input[type="submit" i] {
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 21px;
+     line-height: 25px;
+     border-radius: 12px;
+     background: transparent;
+     border: 0.51px solid #80A3E9;
+     color: #fff;
+     padding: 0.51rem 2.5rem;
+     cursor: pointer;
+     margin-top: 3rem;
+}
+ .success_button {
+     font-size: 17px !important;
+     padding-left: 2rem!important;
+     line-height: 20px !important;
+     border: transparent !important;
+}
+ */
+ .brief__required {
+     color: #fff;
+     margin-top: 0;
+     text-align: end;
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 18px;
+}
+ .form_error {
+     color: #FF6F6F;
+     font-family: 'Raleway', sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 18px;
+}
+ .app__bottom__bottom {
+     width: 100%;
+     display: flex;
+     align-items: baseline;
+}
+ .app__bottom__bottom img:nth-child(1) {
+     width: 43%;
+}
+ .app__bottom__bottom img:nth-child(3) {
+     width: 35%;
+}
+ @media only screen and (min-device-width: 220px) and (max-device-width: 319px) {
+     .app__content img {
+         width: 50%;
+    }
+     .app__bottom__bottom img:nth-child(3) {
+         width: 25%;
+    }
+     .app__bottom {
+         position: relative;
+         left: 0;
+    }
+     .social__media {
+         margin-top: 2rem;
+    }
+     .social__media i {
+         font-size: 28px;
+    }
+     .app__animation {
+         width: 36%;
+    }
+     fieldset {
+         font-size: 20px;
+    }
+     .get_early {
+         font-size: 34px;
+         line-height: 40px;
+    }
+     .input-group {
+         width: 100%;
+         margin: 1.1em 0;
+         position: relative;
+         z-index: 1;
+    }
+     .input__field {
+         width: 89.5%;
+         padding: 0.8em;
+         border: 2px solid transparent;
+    }
+     .app__content h5 {
+         font-weight: 500;
+         font-size: 66px;
+    }
+     .app__content span {
+         border-top: 1px solid #E7EEFC;
+         padding-top: 1rem;
+         border-bottom: 1px solid #ffffff;
+         padding-bottom: 1rem;
+         font-size: 32px;
+         line-height: 38px;
+    }
+}
+ @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+     .app__bottom {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 2rem;
+         margin-top: 2rem;
+    }
+     .app__content img {
+         width: 50%;
+    }
+     .social__media {
+         margin-top: 2rem;
+    }
+     .social__media i {
+         font-size: 28px;
+    }
+     fieldset {
+         font-size: 20px;
+    }
+     .app__animation {
+         width: 36%;
+    }
+     .input-group {
+         width: 100%;
+         margin: 1.1em 0;
+         position: relative;
+         z-index: 1;
+    }
+     .form--register {
+         padding: 40px 20px;
+    }
+     .input__field {
+         width: 89.5%;
+         padding: 0.8em;
+         border: 2px solid transparent;
+    }
+     .get_early {
+         font-size: 34px;
+         line-height: 40px;
+    }
+     .app__bottom {
+         position: relative;
+         left: 0;
+    }
+     .lottie {
+         width: 110%;
+    }
+     .app__form {
+         width: 36%;
+         padding: 2rem;
+    }
+     .app__bottom__bottom img:nth-child(3) {
+         width: 25%;
+    }
+     .app__content h5 {
+         font-weight: 500;
+         font-size: 66px;
+         line-height: 77px;
+    }
+     .app__content span {
+         border-top: 1px solid #E7EEFC;
+         padding-top: 1rem;
+         border-bottom: 1px solid #ffffff;
+         padding-bottom: 1rem;
+         font-size: 32px;
+         line-height: 38px;
+    }
+}
+ @media only screen and (min-device-width: 481px) and (max-device-width: 600px) {
+    /* smartphones, Android phones, landscape iPhone */
+     .app__bottom {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 2rem;
+         margin-top: 2rem;
+    }
+     .app__content img {
+         width: 50%;
+    }
+     .social__media {
+         margin-top: 2rem;
+    }
+     .social__media i {
+         font-size: 28px;
+    }
+     fieldset {
+         font-size: 20px;
+    }
+     .get_early {
+         font-size: 34px;
+         line-height: 40px;
+    }
+     .app__animation {
+         width: 36%;
+    }
+     .form--register {
+         padding: 40px 20px;
+    }
+     .input-group {
+         width: 100%;
+         margin: 1.1em 0;
+         position: relative;
+         z-index: 1;
+    }
+     .input__field {
+         width: 89.5%;
+         padding: 0.8em;
+         border: 2px solid transparent;
+    }
+     .app__form {
+         width: 36%;
+         padding: 2rem;
+    }
+     .app__bottom {
+         position: relative;
+         left: 0;
+    }
+     .app__bottom__bottom img:nth-child(3) {
+         width: 25%;
+    }
+     .app__content h5 {
+         font-weight: 500;
+         font-size: 66px;
+         line-height: 77px;
+    }
+     .app__content span {
+         border-top: 1px solid #E7EEFC;
+         padding-top: 1rem;
+         border-bottom: 1px solid #ffffff;
+         padding-bottom: 1rem;
+         font-size: 32px;
+         line-height: 38px;
+    }
+}
+ @media only screen and (min-device-width: 601px) and (max-device-width: 800px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+     .app__bottom {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 2rem;
+         margin-top: 2rem;
+    }
+     .social__media {
+         margin-top: 2rem;
+    }
+     .social__media i {
+         font-size: 28px;
+    }
+     .app__form {
+         width: 36%;
+         padding: 2rem;
+    }
+     .app__animation {
+         width: 36%;
+    }
+     .get_early {
+         font-size: 34px;
+         line-height: 40px;
+    }
+     .input-group {
+         width: 100%;
+         margin: 1.1em 0;
+         position: relative;
+         z-index: 1;
+    }
+     fieldset {
+         font-size: 20px;
+    }
+     .form--register {
+         padding: 40px 20px;
+    }
+     .input__field {
+         width: 89.5%;
+         padding: 0.8em;
+         border: 2px solid transparent;
+    }
+     .app__content img {
+         width: 50%;
+    }
+     .app__bottom {
+         position: relative;
+         left: 0;
+    }
+     .app__bottom__bottom img:nth-child(3) {
+         width: 25%;
+    }
+     .app__content h5 {
+         font-weight: 500;
+         font-size: 66px;
+         line-height: 77px;
+    }
+     .app__content span {
+         border-top: 1px solid #E7EEFC;
+         padding-top: 1rem;
+         border-bottom: 1px solid #ffffff;
+         padding-bottom: 1rem;
+         font-size: 32px;
+         line-height: 38px;
+    }
+}
+ @media only screen and (min-device-width: 801px) and (max-device-width: 1025px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+     .app__bottom {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         flex-direction: row-reverse;
+         margin-top: 2rem;
+    }
+     .app__form {
+         width: 26%;
+         padding: 2rem;
+    }
+     .social__media {
+         margin-top: 2rem;
+    }
+     .social__media i {
+         font-size: 28px;
+    }
+     .app__form {
+         width: 36%;
+         padding: 2rem;
+    }
+     .app__animation {
+         width: 36%;
+    }
+     .get_early {
+         font-size: 34px;
+         line-height: 40px;
+    }
+     .input-group {
+         width: 100%;
+         margin: 1.1em 0;
+         position: relative;
+         z-index: 1;
+    }
+     fieldset {
+         font-size: 20px;
+    }
+     .form--register {
+         padding: 40px 20px;
+    }
+     .input__field {
+         width: 89.5%;
+         padding: 0.8em;
+         border: 2px solid transparent;
+    }
+     .app__content img {
+         width: 50%;
+    }
+     .app__bottom {
+         position: relative;
+         left: 0;
+    }
+     .app__content img {
+         width: 50%;
+    }
+     .app__bottom__bottom img:nth-child(3) {
+         width: 25%;
+    }
+}
+ @media only screen and (min-device-width: 1026px) and (max-device-width: 1281px) {
+    /* big landscape tablets, laptops, and desktops */
+     .app__bottom {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         flex-direction: row-reverse;
+         margin-top: 2rem;
+    }
+     .app__form {
+         width: 26%;
+    }
+}
