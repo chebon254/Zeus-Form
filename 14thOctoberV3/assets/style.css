@@ -33,16 +33,15 @@ body{
      margin-top: 0.51rem;
 }
  .social__media a {
-    margin: 0px 14px 0px;
+    margin: 0px 10px 0px;
 }
  .app__content {
-     flex-direction: column;
-     gap: 0.61rem;
+    display: block;
      color: #fff;
 }
  .app__content h1 {
-    margin: 20px auto;
-    font-size: 60px;
+    margin: 14px auto;
+    font-size: 50px;
     font-weight: 800 !important;
     font-family: 'Poppins', sans-serif !important;
     color: #ffffff;
@@ -262,17 +261,17 @@ body{
 /**/
  .app__content h5 {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     min-width: 200px;
     margin: auto !important;
      font-family: 'Raleway', sans-serif;
      font-style: normal;
      font-weight: 500;
-     font-size: 40px;
+     font-size: 34px;
      text-align: center;
 }
 .app__content .blocked{
-    margin: auto;
+    margin: 10px auto;
     width: fit-content;
     padding: 6px 20px;
     border-top: 0.51px solid #E7EEFC;
@@ -296,20 +295,22 @@ body{
      height: 0.1rem;
 }
  .app__bottom {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
      display: flex;
      z-index: 9;
-     left: 8%;
-     position: absolute;
+     display: flex;
      align-items: center;
-     justify-content: center;
-     gap: 11rem;
+     justify-content: space-between;
      flex-direction: row-reverse;
 }
  .app__form {
      background-color: #0148D4;
      border-radius: 12px;
      padding: 1rem;
-     width: 18%;
+     width: 100%;
+     max-width: 320px;
 }
  .style__form {
      display: flex;
@@ -367,7 +368,8 @@ body{
      background-position: left!important;
 }
  .app__animation {
-     width: 19%;
+     width: 100%;
+     max-width: 400px;
 }
  .app__animation_img {
      display: block;
