@@ -28,9 +28,19 @@ function emailCheck() {
 
 
 let notifyMe=document.getElementById('button__submit');
+let joinText=document.getElementById('add_success');
+let SuccessText=document.getElementById('complete-success');
 
 notifyMe.addEventListener('click',(e)=>{
     e.preventDefault();
     nameCheck();
     emailCheck(); 
+    buttonCheck();
 });
+
+
+function buttonCheck() {
+    notifyMe.classList.add("success");
+    joinText.style.display= "none";
+    SuccessText.style.display= "block";
+}
