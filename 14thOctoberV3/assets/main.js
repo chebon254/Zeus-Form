@@ -34,8 +34,8 @@ let SuccessText=document.getElementById('complete-success');
 notifyMe.addEventListener('click',(e)=>{
     e.preventDefault();
     nameCheck();
-    emailCheck(); 
-    buttonCheck();
+    emailCheck();
+    buttonCheck(); 
 });
 
 
