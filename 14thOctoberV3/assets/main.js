@@ -70,10 +70,14 @@ notifyMe.addEventListener('click', (e) => {
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error-message');
+    const briefMessage = document.querySelector('#brief-message');
 
     errorDisplay.innerHTML = "<i class=\"fa-solid fa-triangle-exclamation\"></i><p>" + message + "</p>";
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
+    briefMessage.style.color = "#ff6f6f";
+    setTimeout(() => {
+        errorDisplay.innerHTML = "";
+        briefMessage.style.color = "#ffffff";
+    }, 4000);
 }
 
 const setSuccess = element => {
@@ -81,8 +85,6 @@ const setSuccess = element => {
     const errorDisplay = inputControl.querySelector('.error-message');
 
     errorDisplay.innerHTML = "<i class=\"fa-solid fa-check\"></i>";
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
 };
 
 const isValidEmail = email => {

@@ -76,14 +76,16 @@ body{
 /**/
 .form--register {
   width: 100%;
-  max-width: 96%;
+  height: 100%;
   margin: auto;
   padding: 0px 2px;
 }
 .form__instructions {
   color: white;
   text-align: right;
-  font-size: 12px;
+  font-size: 12px !important;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
 }
 fieldset{
   margin: 0px;
@@ -232,7 +234,7 @@ legend {
   border-radius: 12px;
   padding: 30px 26px;
   width: 272px;
-  height: 340px;
+  height: fit-content;
 }
 .style__form {
   display: flex;
@@ -278,19 +280,20 @@ legend {
 }
  */
 .error-message{
-  position: relative;
+  position: absolute;
   pointer-events: none;
   height: 18px;
   display: flex;
   align-items: center;
   width: 100%;
   visibility: visible;
+  bottom: -19px;
 }
 .error-message p{
   display: inline;
   height: fit-content !important;
   color: #ff6f6f;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
   margin: 2px 0px;
