@@ -90,6 +90,7 @@ fieldset{
   padding: 0px;
   outline: none;
   height: 100%;
+  min-height: 214px;
   width: 100%;
   border: 0px !important;
 }
@@ -279,19 +280,17 @@ legend {
 .error-message{
   position: relative;
   pointer-events: none;
-  height: fit-content;
+  height: 18px;
   display: flex;
+  align-items: center;
   width: 100%;
-  visibility: hidden;
-}
-.error-message.active-message{
   visibility: visible;
 }
 .error-message p{
   display: inline;
   height: fit-content !important;
   color: #ff6f6f;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
   margin: 2px 0px;
@@ -300,8 +299,14 @@ legend {
   color: #ff6f6f;
   font-size: 18px;
   position: absolute;
-  top: -36px;
+  top: -32px;
   left: 2px;
+}
+.error-message .fa-triangle-exclamation{
+  color: #ff6f6f;
+}
+.error-message .fa-check{
+  color: #ffffff;
 }
 .app__animation {
   width: 100%;

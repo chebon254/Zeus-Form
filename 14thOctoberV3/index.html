@@ -54,23 +54,19 @@
       </div>
       <div class="app__form">
         <div class="wrap" ng-controller="MainCtrl">
-          <form name="formRegister" class="form--register">
+          <form name="formRegister" action="" id="formRegister" class="form--register">
             <fieldset>
               <legend class="serif get_early">Get Early Access!</legend>
-              <div class="input-group" ng-class="{'input--filled' : user.name}">
+              <div class="input-group">
                 <label class="input__label" for="formRegisterEmail">First Name *</label>
                 <input class="input__field" id="formRegisterName" name="formRegisterName" type="text" required autocomplete="off">
-                <div id="name-message" class="error-message">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <p>This field is required</p>
+                <div id="name-message" class="error-message error">
                 </div>
               </div>
               <div class="input-group" ng-class="{'input--filled' : user.email}">
                 <label class="input__label" for="formRegisterEmail">E-mail address *</label>
                 <input class="input__field" id="formRegisterEmail" name="formRegisterEmail" type="email"required autocomplete="off">
-                <div id="email-message" class="error-message">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <p>Please enter your email address.</p>
+                <div id="email-message" class="error-message error">
                 </div>
               </div>
             </fieldset>
