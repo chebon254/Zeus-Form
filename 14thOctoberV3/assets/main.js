@@ -1,72 +1,35 @@
-// function nameCheck() {
-//     let formName = document.forms["formRegister"]["formRegisterName"].value;
-//     let nameMessage=document.getElementById('name-message');
-//     if (formName == "") {
-//         nameMessage.classList.add("active-message");
-//         setTimeout(() => {
-//             nameMessage.classList.remove("active-message");
-//         }, 2000);
-//     } else{
-//         nameMessage.classList.remove("active-message");
-//     }
-// }
-
-// function emailCheck() {
-//     let formEmail = document.forms["formRegister"]["formRegisterEmail"].value;
-//     let emailMessage=document.getElementById('email-message');
-//     if (formEmail == "") {
-//         emailMessage.classList.add("active-message");
-//         setTimeout(() => {
-//             emailMessage.classList.remove("active-message");
-//         }, 2000);
-//     } else{
-//         emailMessage.classList.remove("active-message");
-//     }
-// }
-
-
-
-
-// let notifyMe=document.getElementById('button__submit');
-// let joinText=document.getElementById('add_success');
-// let SuccessText=document.getElementById('complete-success');
-
-// notifyMe.addEventListener('click',(e)=>{
-//     e.preventDefault();
-//     nameCheck();
-//     emailCheck();
-//     buttonCheck(); 
-// });
-
-
-// function buttonCheck() {
-//     let formName = document.forms["formRegister"]["formRegisterName"].value;
-//     let formEmail = document.forms["formRegister"]["formRegisterEmail"].value;
-//     if (formEmail == "" && formName == "") {
-//         return false;
-//     } else if (formEmail == "" || formName == "") {
-//         return false;
-//     } else{
-//         notifyMe.classList.add("success");
-//         joinText.style.display= "none";
-//         SuccessText.style.display= "block";
-//     }
-// }
-
-
 let notifyMe=document.getElementById('button__submit');
 const form = document.getElementById('formRegister');
 const username = document.getElementById('formRegisterName');
 const email = document.getElementById('formRegisterEmail');
 let joinText=document.getElementById('add_success');
+let joinIcon=document.getElementById('add_success_load_icon');
 let SuccessText=document.getElementById('complete-success');
 
-notifyMe.addEventListener('click', (e) => {
-    e.preventDefault();
+username.addEventListener("invalid", function(event){
+    event.preventDefault()
+  });
 
+  email.addEventListener("invalid", function(event){
+    event.preventDefault()
+  });
+
+  notifyMe.addEventListener('click', () => {
     validateInputs();
-});
-
+  });
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    validateInputs();
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+    }).then((response) => {
+      if (response.status === 200 || response.status === 201) {
+      } else {
+      }
+    });
+    return false;
+  });
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error-message');
@@ -113,8 +76,21 @@ const validateInputs = () => {
     }
 
     if (!usernameValue == '' && !emailValue == '' && !isValidEmail(emailValue) == false) {
-        notifyMe.classList.add("success");
-        joinText.style.display= "none";
+      setTimeout(function(){
         SuccessText.style.display= "block";
+        notifyMe.classList.add("success");
+      },2000); 
+      setTimeout(function(){
+        joinText.style.display= "none";
+      },0); 
+      setTimeout(function(){
+        joinIcon.style.display= "block";
+      },100); 
+      setTimeout(function(){
+        joinIcon.style.display= "none";
+      },2000); 
+      setTimeout(function(){
+        location.reload();
+      },8000); 
     }
 };

@@ -6,6 +6,8 @@
 body{
   background-color: #4682F1;
   padding: 40px 0px 0px;
+  scroll-behavior: smooth;
+  transition: all ease 2000ms;
 }
 .container {
   background-color: #4682f1;
@@ -191,6 +193,17 @@ legend {
   transition: 300ms ease all;
   transition: box-shadow 300ms ease-in-out, color 300ms 0 ease-in-out,
   opacity 300ms ease-in-out;
+}
+.button--submit span{
+  pointer-events: none !important;
+}
+.button--submit #add_success_load_icon{
+  font-size: 20px;
+  margin: 0;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 .button--submit.success{
   background-color: #00b693 !important;

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../opt/lampp/htdocs/ecom"
+		},
+		{
+			"path": "../../../../../../../opt/lampp/htdocs/SkinCare/SkinCare"
+		},
+		{
+			"path": "../../../../../../../opt/lampp/htdocs/SkinCare/SkinCarephp"
+		},
+		{
+			"path": "../../../../../../../opt/lampp/htdocs/ratings"
+		}
+	],
+	"settings": {}
+}
