@@ -76,19 +76,7 @@ const validateInputs = () => {
     }
 
     if (!usernameValue == '' && !emailValue == '' && !isValidEmail(emailValue) == false) {
-      setTimeout(function(){
-        SuccessText.style.display= "block";
-        notifyMe.classList.add("success");
-      },2000); 
-      setTimeout(function(){
-        joinText.style.display= "none";
-      },0); 
-      setTimeout(function(){
-        joinIcon.style.display= "block";
-      },100); 
-      setTimeout(function(){
-        joinIcon.style.display= "none";
-      },2000); 
+      
       setTimeout(function(){
         location.reload();
       },8000); 
